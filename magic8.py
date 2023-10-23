@@ -1,11 +1,12 @@
 import random
 
-name = "Daniel"
+# Game variables
+name = "James"
 question = "Will I win the lottery?"
 answer = ""
-random_number = random.randint(1, 9)
-# print(random_number)
+random_number = random.randint(1, 10)
 
+# Define answer
 if random_number == 1:
     answer = "Yes - definitely."
 elif random_number == 2:
@@ -24,8 +25,18 @@ elif random_number == 8:
     answer = "Outlook not so good."
 elif random_number == 9:
     answer = "Very doubtful."
+elif random_number == 10:
+    answer = "Not a chance, mate."
 else:
     answer = "Error"
 
-print(name + " asks: " + question)
-print("Magic 8-Ball's answer: " + answer)
+# Print question and answer
+if question == "":
+    print("You need to ask a question, mate.")
+else:
+    if name == "":
+        print("Question: " + question)
+    else:
+        print(name + " asks: " + question)
+
+    print("Magic 8-Ball's answer: " + answer)
